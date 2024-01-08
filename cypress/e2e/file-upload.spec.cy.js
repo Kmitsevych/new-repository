@@ -3,7 +3,7 @@
 describe('logo', () => {
   const userAndPass = `${Cypress.env('siteAuthUserName')}:${Cypress.env('siteAuthPassword')}`
 
-  it('logo', () => {
+  it('logo upload', () => {
     cy.visit(`https://${userAndPass}@qauto.forstudy.space/`)
     cy.request('POST', 'https://qauto.forstudy.space/api/auth/signin', {
       "email": Cypress.env('user'),
